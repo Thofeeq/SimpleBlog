@@ -1,5 +1,10 @@
-<p> Title <%= @article.title %> </p>
+<div id="article-title">
+  <h2> <%= @article.title %> </h2>
+  <div id="article-menu">
+  <p> <%= link_to "Edit", edit_article_path(@article.id), class: "btn btn-primary btn-lg" %> </p>
+  <p> <%= link_to "Delete", article_path(@article.id), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-lg" %> </p>
+  <p> <%= link_to "Home", articles_path%> </p>
+  </div>
+</div>
+<hr>
 <p> Body <%= @article.body %> </p>
-<p> <%= link_to "Edit", edit_article_path(@article.id) %> </p>
-<p> <%= link_to "Back to index", articles_path %> </p>
-<p> <%= link_to "Delete", article_path(@article.id), method: :delete, data: {confirm: "Are you sure?"} %> </p>

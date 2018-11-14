@@ -1,2 +1,22 @@
 $navbar-default-bg: rgb(25, 47, 83);
 @import "bootstrap";
+
+.center {
+  text-align: center
+}
+#article-title {
+  margin-top:2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+
+  #article-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    width:25%;
+  }
+}
+
