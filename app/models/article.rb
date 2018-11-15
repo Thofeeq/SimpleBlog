@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+  has_secure_password
+  
   belongs_to :user
 
   validates :title, presence: true, length: { minimum:1, maximum:50 }
