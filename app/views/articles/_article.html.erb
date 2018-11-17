@@ -1,6 +1,6 @@
 <%= link_to "New Article" , new_article_path %>
 
-<% @articles.reverse.each do |article| %>
+<% obj.reverse.each do |article| %>
 <div class="article-list-container">
   <div class="article-title">
     <%= link_to article.title, article_path(article) %>
