@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'application#index'
 
-  get 'signup', to: 'users#new'
+  get 'register', to: 'users#new'
 
   resources :articles
   

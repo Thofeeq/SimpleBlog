@@ -51,7 +51,18 @@ $navbar-default-bg: rgb(25, 47, 83);
   padding:10px;
 }
 
-.signup-form{
+.register-form{
   margin-top:2%;
   margin-left: 25%;
+}
+
+.page-footer {
+  position: absolute;
+  margin-left:40%;
+  margin-top:22%;  
+}
+
+.flash-message {
+  text-align: center;
+  margin-top:15px;
 }
