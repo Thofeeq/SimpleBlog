@@ -1,6 +1,14 @@
 $navbar-default-bg: rgb(25, 47, 83);
 @import "bootstrap";
 
+.container {
+
+  .profile-pic {
+    display:flex;
+    margin-left:43%;
+    border-radius: 50%;
+  }
+}
 .center {
   text-align: center
 }
@@ -66,3 +74,4 @@ $navbar-default-bg: rgb(25, 47, 83);
   text-align: center;
   margin-top:15px;
 }
+
