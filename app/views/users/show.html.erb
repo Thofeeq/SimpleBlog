@@ -1,3 +1,10 @@
 <h1 align="center"> <%= @user.username %>'s Profile </h1>
 <%= gravatar_for @user, 150  %>
-<%= render 'articles/article', obj: @user.articles %>
+
+<div> 
+  <%= will_paginate @user_articles%>
+</div>
+<%= render 'articles/article', obj: @user_articles %>
+<div> 
+  <%= will_paginate @user_articles%>
+</div>
