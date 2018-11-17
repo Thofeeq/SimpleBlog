@@ -17,12 +17,33 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="register">Register</a>
-    </li>
-  </ul>
+    <% if logged_in? %>
+      <div class="logged-in">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="articles/new"><i class="fas fa-plus"></i></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.username %>
+            </a>
+            <div class="dropdown-menu  dropdown-menu-right drop-ul" aria-labelledby="navbarDropdown">
+             <%= link_to "My Profile", user_path(current_user), class: "dropdown-item drop-li" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "Settings", edit_user_path(current_user), class: "dropdown-item drop-li" %>
+              <%= link_to "Logout", logout_path, method: :delete, class: "dropdown-item drop-li" %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <% else %>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register">Register</a>
+        </li>
+      </ul>
+    <% end %>
 </nav>

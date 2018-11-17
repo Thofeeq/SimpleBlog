@@ -81,3 +81,21 @@ $navbar-default-bg: rgb(25, 47, 83);
     padding:10px;
   }
 }
+
+.logged-in {
+  width:150px;
+  ul {
+    justify-content: space-around;
+    a {
+      text-align: right
+    }
+    }
+  .drop-ul{
+    margin-top:10px;
+    background-color:#F8F8F8;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
