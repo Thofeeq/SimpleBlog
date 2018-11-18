@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :get_article, only: [:edit, :update, :show, :destroy]
-
+  before_action :require_user, except: [:index, :show]
+  before_action :require_owner, only: [:edit, :update, :destroy]
   def index
     @articles = Article.order('created_at DESC').paginate(page: params[:page], per_page: 5)
   end
@@ -46,5 +47,11 @@ class ArticlesController < ApplicationController
     end
     def article_params
       params.require(:article).permit(:title, :body)
+    end
+    def require_owner
+      if current_user != @article.user
+        flash[:danger] = "You can only modify your own articles"
+        redirect_back fallback_location: root_path
+      end
     end
 end
