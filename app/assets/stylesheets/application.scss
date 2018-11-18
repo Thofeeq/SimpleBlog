@@ -70,9 +70,14 @@ $navbar-default-bg: rgb(25, 47, 83);
   margin-top: 15px; 
 }
 
-.article-actions {
+.article-footer {
   border-top: 1px solid #eaeaea;
-  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .description {
@@ -80,8 +85,22 @@ $navbar-default-bg: rgb(25, 47, 83);
 }
 
 .article-title {
-  font-weight: bold;
-  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  a{
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .article-options {
+    a {
+      font-weight: normal;
+      font-size:0.90em;
+    }
+  }
+
 }
 
 .article-body {
@@ -105,8 +124,8 @@ $navbar-default-bg: rgb(25, 47, 83);
 .article-list-container {
   border-radius: 10px;
   background-color: #F0F0F0;
-  margin-bottom:10px;
-  padding:10px;
+  margin-bottom:15px;
+  padding:15px;
 }
 
 .user-form-container {
