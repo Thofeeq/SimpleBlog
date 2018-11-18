@@ -1,6 +1,7 @@
 # README
 
 A simple blog app built with Ruby on Rails [In progress]
+Currently deployed to  [Heroku](https://www.google.com)
 
 ![Simple Blog](https://github.com/Thofeeq/SimpleBlog/blob/master/demo_images/image1.png?raw=true)
 ![Simple Blog](https://github.com/Thofeeq/SimpleBlog/blob/master/demo_images/image2.png?raw=true)
