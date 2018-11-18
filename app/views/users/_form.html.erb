@@ -1,24 +1,25 @@
 <%= render 'shared/errors', obj: @user %>
-
-<%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+<div class="user-form-container">
   <div class="register-form">
-    <div class="form-group">
-      <%= f.label :username %>
-      <%= f.text_field :username, class: "form-control col-sm-6", placeholder: "Username" %>
-    </div>
-  
-    <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, class: "form-control col-sm-6", placeholder: "Email" %>
-    </div>
-  
-    <div class="form-group">
-      <%= f.label :password %>
-      <%= f.password_field :password, class: "form-control col-sm-6", placeholder: "Password" %>
-    </div>
-  
-    <p style="margin-left:18%">
-      <%= f.submit (@user.new_record? ? "Register" : "Update"), class: "btn btn-primary btn-lg"  %>
-    </p>
+    <%= form_for(@user) do |f| %>
+        <div class="form-group">
+          <%= f.label :username %>
+          <%= f.text_field :username, class: "form-control", placeholder: "Username" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+        </div>
+
+        <p>
+          <%= f.submit (@user.new_record? ? "Register" : "Update"), class: "btn btn-primary btn-lg"  %>
+        </p>
+    <% end %>
   </div>
-<% end %>
+</div>
