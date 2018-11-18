@@ -12,7 +12,10 @@
     </div>
     </div>
     <div class="article-body">
-    <%= truncate(article.body, length: 100) %>  
+    <%= truncate(article.body, length: 100) %>
+      <% if article.body.length >= 100 %>
+        <%= link_to "Read all", article_path(article) %>
+      <% end %>
     </div>
     <div class="article-footer">
     <div class="timestamp"> Last updated: <%= time_ago_in_words(article.updated_at) %> ago </div>
