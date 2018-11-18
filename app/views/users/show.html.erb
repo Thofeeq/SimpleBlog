@@ -3,6 +3,12 @@
   <div class="pic-container">
     <%= gravatar_for @user, 150 %>
   </div>
+  <div id="article-counter">
+    <p align="center"> Total articles posted: <strong> <%= @user.articles.count %> </strong></p>
+    <% if @user.articles.count == 0 && current_user == @user%>  
+      <%= link_to "Click here to post your first article!", new_article_path, align: "center" %>
+    <% end %>
+  </div>
   <div class="profile-page-articles">
     <%= render 'articles/article', obj: @user_articles %>
     <div class="paginate-container"> 
