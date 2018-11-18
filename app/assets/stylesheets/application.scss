@@ -37,7 +37,7 @@ $navbar-default-bg: rgb(25, 47, 83);
 
 
   }
-  
+// Logged in style for when user is logged in
   .navbar-right{
     display: flex;
     flex-direction: row;
@@ -68,11 +68,6 @@ $navbar-default-bg: rgb(25, 47, 83);
 }
 
 
-.article-meta-details {
-  border-top: 1px solid #eaeaea;
-  margin-top: 15px; 
-}
-
 .article-footer {
   border-top: 1px solid #eaeaea;
   display: flex;
@@ -87,9 +82,6 @@ $navbar-default-bg: rgb(25, 47, 83);
   margin-top: 0;
 }
 
-// .article-index-container {
-//   margin-top: 5%;
-// }
 
 .article-title {
   display: flex;
