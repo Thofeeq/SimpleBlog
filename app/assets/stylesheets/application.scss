@@ -2,6 +2,64 @@ $navbar-default-bg: rgb(25, 47, 83);
 @import "bootstrap";
 
 
+.navbar-custom {
+  background-color: rgb(25, 47, 83);
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .navbar-left{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .navbar-center{
+    display: flex;
+    flex-direction: row;
+    width:30%;
+    justify-content: center;
+  
+    form {
+      display: flex;
+      flex-direction: row;
+      width:90%;
+      justify-content: space-around;
+      input {
+        width:75%;
+      }
+      button {
+        width:20%;
+      }
+    }
+
+
+  }
+  
+  .navbar-right{
+    display: flex;
+    flex-direction: row;
+
+    .logged-in {
+      width:150px;
+      ul {
+        justify-content: space-between;
+        a {
+          text-align: right
+        }
+      }
+      .drop-ul{
+        margin-top:10px;
+        background-color:#F8F8F8;
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+}
+
+
 .center {
   text-align: center
 }
@@ -107,23 +165,5 @@ $navbar-default-bg: rgb(25, 47, 83);
 .pagination {
   li {
     padding:10px;
-  }
-}
-
-.logged-in {
-  width:150px;
-  ul {
-    justify-content: space-around;
-    a {
-      text-align: right
-    }
-    }
-  .drop-ul{
-    margin-top:10px;
-    background-color:#F8F8F8;
-
-    a:hover {
-      text-decoration: underline;
-    }
   }
 }
