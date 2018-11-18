@@ -1,6 +1,9 @@
 $navbar-default-bg: rgb(25, 47, 83);
 @import "bootstrap";
 
+.container {
+  margin-top:2%;
+}
 
 .navbar-custom {
   background-color: rgb(25, 47, 83);
@@ -83,6 +86,10 @@ $navbar-default-bg: rgb(25, 47, 83);
 .description {
   margin-top: 0;
 }
+
+// .article-index-container {
+//   margin-top: 5%;
+// }
 
 .article-title {
   display: flex;
